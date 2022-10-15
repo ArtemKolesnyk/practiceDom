@@ -23,4 +23,4 @@ const markupGallery = images.reduce((acc, el) =>
 
 galleryRef.insertAdjacentHTML('afterbegin', markupGallery);
 galleryRef.setAttribute('style', "list-style-type:none; display: flex; margin: auto; align-content: center; justify-content: space-between;");
-  console.log(galleryRef);
+  
