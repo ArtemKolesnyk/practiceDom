@@ -1,8 +1,11 @@
 const inputRef = document.querySelector('#validation-input');
-console.log(inputRef.value);
 
-const validLengthInput = () => {
-  if (inputRef.getAttribute('data-length') == inputRef.value.length) {
+
+inputRef.addEventListener('blur', validLengthInput);
+
+
+function validLengthInput(event) {
+  if (inputRef.getAttribute('data-length') == event.currentTarget.value.length) {
     inputRef.classList.add('valid');
     inputRef.classList.remove('invalid');
   } else {
@@ -11,4 +14,3 @@ const validLengthInput = () => {
   }
 };
 
-inputRef.addEventListener('blur', validLengthInput);
